@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.systems.sublime.systemv2.AddNoteActivity"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <EditText
+        android:id="@+id/et_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:layout_weight="8"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@color/colorPrimary"
+            android:layout_margin="0dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="cancel"
+            android:layout_weight="1"
+            android:onClick="cancelNote"
+            android:textAllCaps="true"/>
+
+        <Button
+            android:onClick="saveNote"
+            android:id="@+id/btn_save"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorPrimary"
+            android:padding="0dp"
+            android:layout_margin="0dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="save"
+            android:layout_weight="1"
+            android:textAllCaps="true"/>
+    </LinearLayout>
+
+</LinearLayout>
